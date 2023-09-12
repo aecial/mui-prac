@@ -1,16 +1,36 @@
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
-import Avatar from "@mui/material/Avatar";
+// import Button from "@mui/material/Button";
+// import Box from "@mui/material/Box";
+// import Drawer from "@mui/material/Drawer";
+// import Typography from "@mui/material/Typography";
+// import Modal from "@mui/material/Modal";
+// import Avatar from "@mui/material/Avatar";
 import { useState } from "react";
+import {
+  Typography,
+  AppBar,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  CssBaseline,
+  Grid,
+  Toolbar,
+  Container,
+} from "@mui/material";
+import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 function App() {
-  const [open, setOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      <Button onClick={() => setOpen(true)}>Hemwo</Button>
+      <Typography variant="h1">Hemwo</Typography>
+    </>
+  );
+}
+
+export default App;
+
+/* <Button onClick={() => setOpen(true)}>Hemwo</Button>
       <Drawer
         sx={{ width: "50%" }}
         anchor="right"
@@ -44,9 +64,4 @@ function App() {
             <Typography paragraph>Ror</Typography>
           </Modal>
         </Box>
-      </Drawer>
-    </>
-  );
-}
-
-export default App;
+      </Drawer> */
