@@ -23,7 +23,37 @@ function App() {
   // const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      <Typography variant="h1">Hemwo</Typography>
+      <CssBaseline />
+      <AppBar position="relative">
+        <Toolbar>
+          <PhotoCameraIcon />
+          <Typography variant="h6">Photo Album</Typography>
+        </Toolbar>
+      </AppBar>
+      <main>
+        <div>
+          <Container maxWidth="sm">
+            <Typography
+              align="center"
+              variant="h2"
+              color="textPrimary"
+              gutterBottom
+            >
+              Photo Album
+            </Typography>
+            <Typography
+              variant="h5"
+              align="center"
+              color="textSecondary"
+              paragraph
+            >
+              Hello Everyone, this is a Photo Album and I'm trying to make this
+              sentence as long as possible so we can see how it looks like on
+              the screen
+            </Typography>
+          </Container>
+        </div>
+      </main>
     </>
   );
 }
