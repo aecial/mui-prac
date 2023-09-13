@@ -5,6 +5,7 @@
 // import Modal from "@mui/material/Modal";
 // import Avatar from "@mui/material/Avatar";
 import { useState } from "react";
+import { StyledEngineProvider } from "@mui/material/styles";
 import {
   Typography,
   AppBar,
@@ -32,7 +33,7 @@ function App() {
         </Toolbar>
       </AppBar>
       <main>
-        <div>
+        <div className=" bg-slate-50 mt-16">
           <Container maxWidth="sm">
             <Typography
               align="center"
