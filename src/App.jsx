@@ -21,7 +21,24 @@ import {
 } from "@mui/material";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 function App() {
-  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const cards = [
+    {
+      id: 1,
+      src: "https://images.pexels.com/photos/17286187/pexels-photo-17286187/free-photo-of-back-of-a-black-dodge-challenger.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 2,
+      src: "https://images.pexels.com/photos/16863991/pexels-photo-16863991/free-photo-of-back-of-white-dodge-challenger.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 3,
+      src: "https://images.pexels.com/photos/10854772/pexels-photo-10854772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      id: 4,
+      src: "https://images.pexels.com/photos/13542034/pexels-photo-13542034.jpeg?auto=compress&cs=tinysrgb&w=600",
+    },
+  ];
   // const [open, setOpen] = useState(false);
   // const [isModalOpen, setIsModalOpen] = useState(false);
   return (
@@ -72,11 +89,19 @@ function App() {
         </div>
         <Container maxWidth="md">
           <Grid container spacing={4} justifyContent="center">
-            {cards.map(() => (
-              <Grid item>
-                <Card className=" w-56 h-auto">
+            {cards.map((item) => (
+              <Grid
+                item
+                key={item.id}
+                xs={12}
+                sm={6}
+                md={3}
+                lg={6}
+                className="border-black border-4 "
+              >
+                <Card className=" w-full h-auto ">
                   <CardMedia
-                    image="https://images.pexels.com/photos/17286187/pexels-photo-17286187/free-photo-of-back-of-a-black-dodge-challenger.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    image={item.src}
                     className="w-full h-24 pt-[56.25%]"
                     title="Dodge"
                   />
