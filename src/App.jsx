@@ -16,6 +16,7 @@ import {
   Grid,
   Toolbar,
   Container,
+  Button,
 } from "@mui/material";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 function App() {
@@ -51,6 +52,20 @@ function App() {
               sentence as long as possible so we can see how it looks like on
               the screen
             </Typography>
+            <div>
+              <Grid container spacing={2} justifyContent="center">
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    See my photos
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="outlined" color="primary">
+                    Secondary Action
+                  </Button>
+                </Grid>
+              </Grid>
+            </div>
           </Container>
         </div>
       </main>
