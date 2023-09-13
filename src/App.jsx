@@ -21,6 +21,7 @@ import {
 } from "@mui/material";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 function App() {
+  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   // const [open, setOpen] = useState(false);
   // const [isModalOpen, setIsModalOpen] = useState(false);
   return (
@@ -28,12 +29,12 @@ function App() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <PhotoCameraIcon />
+          <PhotoCameraIcon className="mr-4" fontSize="large" />
           <Typography variant="h6">Photo Album</Typography>
         </Toolbar>
       </AppBar>
       <main>
-        <div className=" bg-slate-50 mt-16">
+        <div className=" bg-slate-50 mt-16 p-4">
           <Container maxWidth="sm">
             <Typography
               align="center"
@@ -69,6 +70,35 @@ function App() {
             </div>
           </Container>
         </div>
+        <Container maxWidth="md">
+          <Grid container spacing={4} justifyContent="center">
+            {cards.map(() => (
+              <Grid item>
+                <Card className=" w-56 h-auto">
+                  <CardMedia
+                    image="https://images.pexels.com/photos/17286187/pexels-photo-17286187/free-photo-of-back-of-a-black-dodge-challenger.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    className="w-full h-24 pt-[56.25%]"
+                    title="Dodge"
+                  />
+                  <CardContent className=" flex-grow ">
+                    <Typography gutterBottom variant="h5">
+                      Heading
+                    </Typography>
+                    <Typography>This is a media card</Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      View
+                    </Button>
+                    <Button size="small" className="text-slate-500">
+                      Edit
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
       </main>
     </>
   );
