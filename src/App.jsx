@@ -1,57 +1,56 @@
-import {
-  Typography,
-  AppBar,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  CssBaseline,
-  Grid,
-  Toolbar,
-  Container,
-  Button,
-} from "@mui/material";
+// import {
+//   Typography,
+//   AppBar,
+//   Card,
+//   CardActions,
+//   CardContent,
+//   CardMedia,
+//   CssBaseline,
+//   Grid,
+//   Toolbar,
+//   Container,
+//   Button,
+// } from "@mui/material";
 import PhotoAlbum from "./PhotoAlbum";
 import { useState, Suspense } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import React from "react";
+import {
+  AppBar,
+  Typography,
+  CssBaseline,
+  Toolbar,
+  TextField,
+  Badge,
+  Avatar,
+} from "@mui/material";
+import Diversity2OutlinedIcon from "@mui/icons-material/Diversity2Outlined";
+
+import Badges from "./Badges";
 function App() {
-  return <>{/* <PhotoAlbum /> */}</>;
+  return (
+    <>
+      {/* <PhotoAlbum /> */}
+      <CssBaseline />
+      <AppBar className="h-20" position="relative">
+        <Toolbar className="flex justify-between items-center p-4">
+          <div className="flex items-center justify-center">
+            <Diversity2OutlinedIcon className="mr-4" fontSize="large" />
+            <Typography variant="h6">Peysbuk</Typography>
+          </div>
+          <div>
+            <TextField
+              id="filled-basic"
+              label="Search "
+              variant="filled"
+              className="bg-slate-50 rounded-3xl hidden md:flex"
+            ></TextField>
+          </div>
+          <Badges />
+        </Toolbar>
+      </AppBar>
+      <Typography paragraph>Hemwo!</Typography>
+    </>
+  );
 }
 export default App;
-
-/* <Button onClick={() => setOpen(true)}>Hemwo</Button>
-      <Drawer
-        sx={{ width: "50%" }}
-        anchor="right"
-        open={open}
-        onClose={() => setOpen(false)}
-      >
-        <Box
-          sx={{
-            width: 400,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            paddingTop: 10,
-          }}
-        >
-          <Avatar
-            alt="Remy Sharp"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu1q6Zw_OrF0sOMDXl3S-8yVkUNSMo-hNmGw&usqp=CAU"
-            sx={{ width: 200, height: 200 }}
-          />
-          <Typography paddingTop={"20px"} paragraph>
-            @kledted
-          </Typography>
-          <Button onClick={() => setIsModalOpen(true)}>Open Modal</Button>
-          <Modal
-            sx={{ color: "white" }}
-            open={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-          >
-            <Typography paragraph>Ror</Typography>
-          </Modal>
-        </Box>
-      </Drawer> */
