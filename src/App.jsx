@@ -40,6 +40,7 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import PortraitIcon from "@mui/icons-material/Portrait";
 import MenuIcon from "@mui/icons-material/Menu";
+import Post from "./Post";
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   return (
@@ -61,10 +62,10 @@ function App() {
             ></TextField>
           </div>
           <Badges onClick={() => setDrawerOpen(true)} />
-          <Button variant="outlined" className="text-white">
+          <Button variant="outlined" className="text-white md:hidden">
             <MenuIcon
               fontSize="large"
-              className="block md:hidden"
+              className="block "
               onClick={() => setDrawerOpen(true)}
             />
           </Button>
@@ -120,7 +121,9 @@ function App() {
           </Button>
         </Box>
       </Drawer>
-      <main></main>
+      <main className="p-4">
+        <Post />
+      </main>
     </>
   );
 }
