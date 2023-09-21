@@ -13,21 +13,17 @@ import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
-const Post = ({}) => {
+const Post = ({ imgSrc, header, month, day, year }) => {
   const [liked, setLiked] = useState(false);
   return (
     <Card className="flex flex-col shadow-black shadow-md md:w-72">
-      <CardMedia
-        image="./src/assets/profile.jpg"
-        lazy="true"
-        className="h-44 w-full md:w-auto"
-      />
+      <CardMedia image={imgSrc} lazy="true" className="h-44 w-full md:w-auto" />
       <CardContent>
         <Typography variant="h4" className="text-left">
-          Hemwo!
+          {header}
         </Typography>
         <Typography paragraph variant="h6" className="text-gray-500">
-          September 19, 2023
+          Posted: {month} {day}, {year}
         </Typography>
       </CardContent>
       <Divider />

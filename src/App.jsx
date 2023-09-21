@@ -11,9 +11,6 @@
 //   Container,
 //   Button,
 // } from "@mui/material";
-import PhotoAlbum from "./PhotoAlbum";
-import { useState, Suspense } from "react";
-import CircularProgress from "@mui/material/CircularProgress";
 import React from "react";
 import {
   AppBar,
@@ -33,7 +30,7 @@ import {
   Button,
 } from "@mui/material";
 
-import Post from "./Post";
+import Post from "./components/Post";
 import Navbar from "./components/Navbar";
 function App() {
   return (
@@ -41,14 +38,23 @@ function App() {
       {/* <PhotoAlbum /> */}
       <CssBaseline />
       <Navbar />
-
       <main className="p-4 flex flex-col items-center gap-5">
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <Post
+          imgSrc={"./src/assets/profile.jpg"}
+          header={"I am Teddy Pascual"}
+          month={"September"}
+          day={"21"}
+          year={"2023"}
+        />
+        <Post
+          imgSrc={
+            "https://images.pexels.com/photos/17286187/pexels-photo-17286187/free-photo-of-back-of-a-black-dodge-challenger.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          }
+          header={"Dodge Challenger"}
+          month={"September"}
+          day={"21"}
+          year={"2023"}
+        />
       </main>
     </>
   );
