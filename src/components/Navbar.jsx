@@ -23,7 +23,7 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import PortraitIcon from "@mui/icons-material/Portrait";
 import MenuIcon from "@mui/icons-material/Menu";
-import Badges from "../Badges";
+import Badges from "./Badges";
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
