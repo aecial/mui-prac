@@ -37,7 +37,9 @@ const Navbar = () => {
               fontSize="large"
               color="primary"
             />
-            <Typography variant="h6">Peysbuk</Typography>
+            <Typography variant="h3" className="font-bold">
+              Peysbuk
+            </Typography>
           </div>
           <div>
             <TextField
