@@ -13,22 +13,17 @@ import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
-let date = new Date();
-let month = date.getMonth();
-
-let day = date.getDate();
-let year = date.getFullYear();
-const Post = ({ imgSrc, header }) => {
+const Post = ({ imgSrc, header, month, day, year }) => {
   const [liked, setLiked] = useState(false);
   return (
     <Card className="flex flex-col shadow-black shadow-md md:w-72">
-      <CardMedia image={imgSrc} lazy="true" className="h-44 w-full md:w-auto" />
+      <CardMedia image={imgSrc} lazy="true" className="h-72 w-auto " />
       <CardContent>
         <Typography variant="h4" className="text-left">
           {header}
         </Typography>
         <Typography paragraph variant="h6" className="text-gray-500">
-          Posted: {month}/{day}/{year}
+          Posted: {month} {day}, {year}
         </Typography>
       </CardContent>
       <Divider />
