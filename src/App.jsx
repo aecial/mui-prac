@@ -45,8 +45,7 @@ function App() {
       <main className="p-4 items-center gap-5">
         <div className="grid grid-cols-1 md:grid-cols-3">
           <SideNavigation />
-          {/* <Home /> */}
-          <Pages />
+          <Home />
           <Aside online={10} />
         </div>
       </main>
