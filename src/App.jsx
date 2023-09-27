@@ -1,41 +1,10 @@
-// import {
-//   Typography,
-//   AppBar,
-//   Card,
-//   CardActions,
-//   CardContent,
-//   CardMedia,
-//   CssBaseline,
-//   Grid,
-//   Toolbar,
-//   Container,
-//   Button,
-// } from "@mui/material";
 import React from "react";
-import {
-  AppBar,
-  Typography,
-  CssBaseline,
-  Toolbar,
-  TextField,
-  Badge,
-  Avatar,
-  Drawer,
-  Box,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemButton,
-  ListItemText,
-  Button,
-} from "@mui/material";
-
-import Post from "./components/Post";
+import { CssBaseline } from "@mui/material";
 import Navbar from "./components/Navbar";
 import SideNavigation from "./components/SideNavigation";
 import Aside from "./components/Aside";
 import Home from "./components/Home";
-import Pages from "./components/Pages";
+
 function App() {
   return (
     <>
