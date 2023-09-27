@@ -10,7 +10,7 @@ import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 const SideNavigation = () => {
   return (
     <div className="bg-slate-100 uppercase">
-      <List className="p-4 flex flex-col gap-4">
+      <List className="p-4 flex flex-col gap-4 fixed w-96">
         <ListItemButton className="shadow-sm shadow-black">
           <ListItemIcon>
             <HomeOutlinedIcon fontSize="large" />
