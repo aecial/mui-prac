@@ -9,7 +9,7 @@ import AutoStoriesOutlinedIcon from "@mui/icons-material/AutoStoriesOutlined";
 import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 const SideNavigation = () => {
   return (
-    <div className="bg-slate-100 uppercase">
+    <div className="bg-slate-100 uppercase hidden md:block">
       <List className="p-4 flex flex-col gap-4 fixed w-96">
         <ListItemButton className="shadow-sm shadow-black">
           <ListItemIcon>
